@@ -1,0 +1,61 @@
+h1{
+    font-family: Verdana, Geneva, sans-serif;
+}
+.contenedorsillo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: peachpuff;
+}
+.titulillo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corazaun{
+    background: palevioletred;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    transform: rotate(-45deg) scale(1);
+    animation: pulse 1s linear infinite;
+
+}
+
+@keyframes pulse{
+    0% {
+        transform: rotate(-45deg) scale(1) ;
+    }
+    10%{
+        transform: rotate(-45deg) scale(1.1) ;
+    }
+    20%{
+        transform: rotate(-45deg) scale(0.9) ;
+    }
+}
+
+.corazaun::after{
+    background: inherit;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 0;
+    height: 200px;
+    width: 200px;
+
+}
+
+.corazaun::before{
+    background: inherit;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    top: 0%;
+    right: -50%;
+    height: 200px;
+    width: 200px;
+
+}
